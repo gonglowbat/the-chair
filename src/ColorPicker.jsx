@@ -1,6 +1,7 @@
 import { useSnapshot } from 'valtio'
 import { colors } from './colors'
 import { state } from './state'
+import { textures } from './textures'
 
 export default function ColorPicker() {
     const snap = useSnapshot(state)
@@ -9,19 +10,22 @@ export default function ColorPicker() {
         state.selections[snap.activeOption] = { ...color }
     }
 
-    const colorItems = colors.map((color, index) => {
-        const style = {}
-
-        if (color.texture) {
-            style.backgroundImage = `url('${color.url}')`
-        } else {
-            style.background = `${color.color}`
-        }
-
+    const textureItems = textures.map((texture) => {
         return (
             <div
                 className="tray__swatch"
-                style={style}
+                style={{ backgroundImage: `url('${texture.url}')` }}
+                key={texture.texture}
+                onClick={() => handleOnClick(texture)}
+            />
+        )
+    })
+
+    const colorItems = colors.map((color, index) => {
+        return (
+            <div
+                className="tray__swatch"
+                style={{ backgroundColor: `${color.color}` }}
                 data-key={index}
                 key={index}
                 onClick={() => handleOnClick(color)}
@@ -39,6 +43,7 @@ export default function ColorPicker() {
 
             <div className="js-tray tray colors">
                 <div className="js-tray-slide tray__slide color">
+                    {textureItems}
                     {colorItems}
                 </div>
             </div>
