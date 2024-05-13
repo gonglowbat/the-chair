@@ -2,7 +2,7 @@ import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
 import Experience from './Experience'
 import ColorPicker from './ColorPicker'
-import ChairOption from './ChairOption'
+import ChairParts from './ChairParts'
 
 export default function App() {
     return (
@@ -22,7 +22,7 @@ export default function App() {
             </Canvas>
 
             <ColorPicker />
-            <ChairOption />
+            <ChairParts />
         </>
     )
 }

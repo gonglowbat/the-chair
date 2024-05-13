@@ -37,12 +37,12 @@ html {
     width: 100%;
 }
 
-.chair-options {
+.chair-parts {
     position: absolute;
     left: 0;
 }
 
-.chair-option {
+.chair-part {
     background-size: cover;
     background-position: 50%;
     background-color: white;
@@ -56,22 +56,22 @@ html {
     cursor: pointer;
 }
 
-.chair-option:hover {
+.chair-part:hover {
     border-left: 5px solid white;
     width: 58px;
 }
 
-.chair-option.--is-active {
+.chair-part.--is-active {
     border-right: 3px solid red;
     width: 58px;
     cursor: default;
 }
 
-.chair-option.--is-active:hover {
+.chair-part.--is-active:hover {
     border-left: none;
 }
 
-.chair-option img {
+.chair-part img {
     height: 100%;
     width: auto;
     pointer-events: none;
@@ -116,7 +116,7 @@ html {
 }
 
 @media (max-width: 960px) {
-    .chair-options {
+    .chair-parts {
         top: 0;
     }
 
@@ -157,11 +157,11 @@ html {
         display: none;
     }
 
-    .chair-options {
+    .chair-parts {
         bottom: 50px;
     }
 
-    .chair-option {
+    .chair-part {
         margin-bottom: 1px;
         padding: 5px;
         height: 45px;
@@ -169,12 +169,12 @@ html {
         display: flex;
     }
 
-    .chair-option.--is-active {
+    .chair-part.--is-active {
         border-right: 2px solid red;
         width: 47px;
     }
 
-    .chair-option img {
+    .chair-part img {
         height: 100%;
         width: auto;
         pointer-events: none;

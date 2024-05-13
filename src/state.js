@@ -1,7 +1,7 @@
 import { proxy } from "valtio"
 
 export const state = proxy({
-    activeOption: 'legs',
+    activePart: 'legs',
     selections: {
         legs: { color: '#f1f1f1' },
         back: { color: '#f1f1f1' },

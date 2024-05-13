@@ -7,7 +7,7 @@ export default function ColorPicker() {
     const snap = useSnapshot(state)
 
     const handleOnClick = (color) => {
-        state.selections[snap.activeOption] = { ...color }
+        state.selections[snap.activePart] = { ...color }
     }
 
     const textureItems = textures.map((texture) => {
