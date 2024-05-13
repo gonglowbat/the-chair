@@ -10,26 +10,65 @@ import Floor from './Floor'
 export default function Experience() {
     const { gl } = useThree()
 
+    const performanceMeter = useControls('PerformanceMeter', {
+        visible: true,
+    })
+
+    const orbitControls = useControls('OrbitControls', {
+        autoRotate: false,
+        autoRotateSpeed: { value: 1, min: 1, max: 10, step: 1 },
+    })
+
     const renderer = useControls('Render', {
-        toneMapping: { options: {
-            ACESFilmicToneMapping: THREE.ACESFilmicToneMapping,
-            LinearToneMapping: THREE.LinearToneMapping,
-            ReinhardToneMapping: THREE.ReinhardToneMapping,
-            CineonToneMapping: THREE.CineonToneMapping,
-            AgXToneMapping: THREE.AgXToneMapping,
-            NeutralToneMapping: THREE.NeutralToneMapping,
-            CustomToneMapping: THREE.CustomToneMapping,
-            NoToneMapping: THREE.NoToneMapping,
-        }},
+        toneMapping: {
+            options: {
+                ACESFilmicToneMapping: THREE.ACESFilmicToneMapping,
+                LinearToneMapping: THREE.LinearToneMapping,
+                ReinhardToneMapping: THREE.ReinhardToneMapping,
+                CineonToneMapping: THREE.CineonToneMapping,
+                AgXToneMapping: THREE.AgXToneMapping,
+                NeutralToneMapping: THREE.NeutralToneMapping,
+                CustomToneMapping: THREE.CustomToneMapping,
+                NoToneMapping: THREE.NoToneMapping,
+            },
+        },
+    })
+
+    const shadowMap = useControls('ShadowMapType', {
+        type: {
+            options: {
+                PCFSoftShadowMap: THREE.PCFSoftShadowMap,
+                BasicShadowMap: THREE.BasicShadowMap,
+                PCFShadowMap: THREE.PCFShadowMap,
+                VSMShadowMap: THREE.VSMShadowMap,
+            },
+        },
+    })
+
+    const outputColorSpace = useControls('OutputColorSpace', {
+        outputColorSpace: {
+            options: {
+                SRGBColorSpace: THREE.SRGBColorSpace,
+                LinearSRGBColorSpace: THREE.LinearSRGBColorSpace,
+            },
+        },
     })
 
     useEffect(() => {
         gl.toneMapping = renderer.toneMapping
     }, [renderer.toneMapping])
 
+    useEffect(() => {
+        gl.shadowMap.type = shadowMap.type
+    }, [shadowMap.type])
+
+    useEffect(() => {
+        gl.outputColorSpace = outputColorSpace.outputColorSpace
+    }, [outputColorSpace.outputColorSpace])
+
     return <>
 
-        <Perf position="top-left" />
+        { performanceMeter.visible ? <Perf position="top-left" /> : null }
 
         <OrbitControls
             makeDefault
@@ -38,8 +77,8 @@ export default function Experience() {
             enableDamping
             enablePan={false}
             dampingFactor={0.1}
-            autoRotate={false}
-            autoRotateSpeed={1}
+            autoRotate={orbitControls.autoRotate}
+            autoRotateSpeed={orbitControls.autoRotateSpeed}
         />
 
         <hemisphereLight

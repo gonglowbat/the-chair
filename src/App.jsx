@@ -17,6 +17,7 @@ export default function App() {
                     position: [0, 0, 5],
                 }}
             >
+                <fog attach="fog" args={['ivory', 10, 80]} />
                 <Experience />
             </Canvas>
 
