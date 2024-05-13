@@ -1,12 +1,18 @@
 import { Canvas } from '@react-three/fiber'
+import { useProgress } from '@react-three/drei'
 import { Leva } from 'leva'
 import Experience from './Experience'
 import OptionPicker from './OptionPicker'
 import ChairParts from './ChairParts'
+import Loader from './Loader'
 
 export default function App() {
+    const { progress } = useProgress()
+
     return (
         <>
+            { progress !== 100 ? <Loader /> : null }
+
             <Leva collapsed={false} oneLineLabels={true} />
             <Canvas
                 shadows
