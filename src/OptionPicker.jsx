@@ -34,6 +34,13 @@ export default function OptionPicker() {
 
     return (
         <div className="controls">
+            <div className="credits">
+                <b>Credits: </b>
+                <a href="https://tympanus.net/codrops/2019/09/17/how-to-build-a-color-customizer-app-for-a-3d-model-with-three-js/">
+                    Original Article
+                </a>
+            </div>
+
             <div className="options">
                 <div className="options-slide">
                     {textureItems}
