@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { Leva } from 'leva'
 import Experience from './Experience'
-import ColorPicker from './ColorPicker'
+import OptionPicker from './OptionPicker'
 import ChairParts from './ChairParts'
 
 export default function App() {
@@ -17,11 +17,12 @@ export default function App() {
                     position: [0, 0, 5],
                 }}
             >
-                <fog attach="fog" args={['ivory', 10, 80]} />
+                <color attach="background" args={['#f1f1f1']} />
+                <fog attach="fog" args={['#f1f1f1', 10, 80]} />
                 <Experience />
             </Canvas>
 
-            <ColorPicker />
+            <OptionPicker />
             <ChairParts />
         </>
     )

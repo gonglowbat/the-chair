@@ -31,12 +31,6 @@ html {
     height: 100%;
 }
 
-.controls {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
-
 .chair-parts {
     position: absolute;
     left: 0;
@@ -77,17 +71,13 @@ html {
     pointer-events: none;
 }
 
-.info {
-    padding: 0 1em;
-    display: flex;
-    justify-content: flex-end;
+.controls {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 
-.info p {
-    margin-top: 0;
-}
-
-.tray {
+.options {
     width: 100%;
     height: 50px;
     position: relative;
@@ -95,13 +85,13 @@ html {
     cursor: pointer;
 }
 
-.tray__slide {
+.options-slide {
     position: absolute;
     display: flex;
     left: 0;
 }
 
-.tray__swatch {
+.option {
     transition: 0.1s ease-in;
     height: 50px;
     min-width: 50px;
@@ -111,72 +101,6 @@ html {
     background-position: center;
 }
 
-.tray__swatch:nth-child(5n+5) {
+.option:nth-child(5n+5) {
     margin-right: 20px;
-}
-
-@media (max-width: 960px) {
-    .chair-parts {
-        top: 0;
-    }
-
-    .info {
-        padding: 0 1em 1em 0;
-    }
-
-    .info__message {
-        display: flex;
-        align-items: flex-end;
-    }
-
-    .info__message p {
-        margin: 0;
-        font-size: 0.7em;
-    }
-}
-
-@media (max-width: 720px) {
-    .info {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 0 1em 1em;
-    }
-
-    .info__message {
-        margin-bottom: 1em;
-    }
-}
-
-@media (max-width: 680px) {
-    .info {
-        padding: 1em 2em;
-    }
-
-    .info__message {
-        display: none;
-    }
-
-    .chair-parts {
-        bottom: 50px;
-    }
-
-    .chair-part {
-        margin-bottom: 1px;
-        padding: 5px;
-        height: 45px;
-        width: 45px;
-        display: flex;
-    }
-
-    .chair-part.--is-active {
-        border-right: 2px solid red;
-        width: 47px;
-    }
-
-    .chair-part img {
-        height: 100%;
-        width: auto;
-        pointer-events: none;
-    }
 }

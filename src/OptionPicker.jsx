@@ -3,7 +3,7 @@ import { colors } from './colors'
 import { state } from './state'
 import { textures } from './textures'
 
-export default function ColorPicker() {
+export default function OptionPicker() {
     const snap = useSnapshot(state)
 
     const handleOnClick = (color) => {
@@ -13,7 +13,7 @@ export default function ColorPicker() {
     const textureItems = textures.map((texture) => {
         return (
             <div
-                className="tray__swatch"
+                className="option"
                 style={{ backgroundImage: `url('${texture.url}')` }}
                 key={texture.texture}
                 onClick={() => handleOnClick(texture)}
@@ -21,28 +21,21 @@ export default function ColorPicker() {
         )
     })
 
-    const colorItems = colors.map((color, index) => {
+    const colorItems = colors.map((color) => {
         return (
             <div
-                className="tray__swatch"
+                className="option"
                 style={{ backgroundColor: `${color.color}` }}
-                data-key={index}
-                key={index}
+                key={color.color}
                 onClick={() => handleOnClick(color)}
             />
         )
     })
 
     return (
-        <div className="controls color-picker">
-            {/* <div class="info">
-                <div class="info__message">
-                    <p><strong>&nbsp;Grab&nbsp;</strong> to rotate chair. <strong>&nbsp;Scroll&nbsp;</strong> to zoom. <strong>&nbsp;Drag&nbsp;</strong> swatches to view more.</p>
-                </div>
-            </div> */}
-
-            <div className="js-tray tray colors">
-                <div className="js-tray-slide tray__slide color">
+        <div className="controls">
+            <div className="options">
+                <div className="options-slide">
                     {textureItems}
                     {colorItems}
                 </div>
