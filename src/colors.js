@@ -1,29 +1,34 @@
 export const colors = [
-    // {
-    //     texture: '/images/wood.jpg',
-    //     size: [2, 2, 2],
-    //     shininess: 60,
-    // },
-    // {
-    //     texture: '/images/denim.jpg',
-    //     size: [3, 3, 3],
-    //     shininess: 0,
-    // },
-    // {
-    //     texture: '/images/fabric.jpg',
-    //     size: [4, 4, 4],
-    //     shininess: 0,
-    // },
-    // {
-    //     texture: '/images/pattern.jpg',
-    //     size: [8, 8, 8],
-    //     shininess: 10,
-    // },
-    // {
-    //     texture: '/images/quilt.jpg',
-    //     size: [6, 6, 6],
-    //     shininess: 0,
-    // },
+    {
+        texture: 'wood',
+        url: '/images/wood.jpg',
+        repeat: [2, 2],
+        shininess: 60,
+    },
+    {
+        texture: 'denim',
+        url: '/images/denim.jpg',
+        repeat: [3, 3],
+        shininess: 0,
+    },
+    {
+        texture: 'fabric',
+        url: '/images/fabric.jpg',
+        repeat: [4, 4],
+        shininess: 0,
+    },
+    {
+        texture: 'pattern',
+        url: '/images/pattern.jpg',
+        repeat: [8, 8],
+        shininess: 10,
+    },
+    {
+        texture: 'quilt',
+        url: '/images/quilt.jpg',
+        repeat: [6, 6],
+        shininess: 0,
+    },
     { color: '#131417' },
     { color: '#374047' },
     { color: '#5f6e78' },

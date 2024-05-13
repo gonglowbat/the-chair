@@ -13,7 +13,7 @@ export default function ColorPicker() {
         const style = {}
 
         if (color.texture) {
-            style.backgroundImage = `url('${color.texture}')`
+            style.backgroundImage = `url('${color.url}')`
         } else {
             style.background = `${color.color}`
         }

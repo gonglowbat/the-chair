@@ -7,7 +7,7 @@ import ChairOption from './ChairOption'
 export default function App() {
     return (
         <>
-            <Leva collapsed={false} />
+            <Leva collapsed={false} oneLineLabels={true} />
             <Canvas
                 shadows
                 camera={{
