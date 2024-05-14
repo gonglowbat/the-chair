@@ -1,7 +1,8 @@
 import { Canvas } from '@react-three/fiber'
 import { useProgress } from '@react-three/drei'
 import { Leva } from 'leva'
-import { Analytics } from "@vercel/analytics/react"
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 import Experience from './Experience'
 import OptionPicker from './OptionPicker'
 import ChairParts from './ChairParts'
@@ -33,6 +34,7 @@ export default function App() {
             <ChairParts />
 
             <Analytics />
+            <SpeedInsights />
         </>
     )
 }
