@@ -7,7 +7,7 @@ import { useThree } from '@react-three/fiber'
 import Chair from './Chair'
 import Floor from './Floor'
 
-export default function Experience() {
+export default function Scene() {
     const { gl } = useThree()
 
     const performanceMeter = useControls('PerformanceMeter', {

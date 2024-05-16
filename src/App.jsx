@@ -4,7 +4,7 @@ import { EffectComposer, Outline, Selection, ToneMapping } from '@react-three/po
 import { Leva } from 'leva'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import Experience from './Experience'
+import Scene from './Scene'
 import OptionPicker from './OptionPicker'
 import ChairParts from './ChairParts'
 import Loader from './Loader'
@@ -36,7 +36,7 @@ export const App = () => {
 
                 <Selection>
                     <Effects />
-                    <Experience />
+                    <Scene />
                 </Selection>
             </Canvas>
 
