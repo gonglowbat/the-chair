@@ -2,7 +2,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "deploy": "npx vercel"
   },
   "dependencies": {
     "@react-three/drei": "^9.105.6",
@@ -15,11 +16,11 @@
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "three": "^0.164.1",
-    "valtio": "^1.13.2"
+    "valtio": "^1.13.2",
+    "vercel": "^34.2.2"
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.2.1",
-    "vercel": "^34.1.11",
     "vite": "^5.2.11"
   }
 }
