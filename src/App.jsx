@@ -4,10 +4,10 @@ import { EffectComposer, Outline, Selection, ToneMapping } from '@react-three/po
 import { Leva } from 'leva'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/react'
-import Scene from './Scene'
-import OptionPicker from './OptionPicker'
-import ChairParts from './ChairParts'
-import Loader from './Loader'
+import Scene from './components/Scene'
+import OptionPicker from './components/OptionPicker'
+import ChairParts from './components/ChairParts'
+import Loader from './components/Loader'
 
 export const App = () => {
     const { progress } = useProgress()

@@ -1,6 +1,6 @@
 import { useSnapshot } from "valtio"
-import { parts } from "./parts"
-import { state } from "./state"
+import { parts } from "../data/parts"
+import { state } from "../stores/state"
 
 export default function ChairParts() {
     const snap = useSnapshot(state)

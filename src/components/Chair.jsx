@@ -2,8 +2,8 @@ import * as THREE from 'three'
 import { useGLTF, useTexture } from '@react-three/drei'
 import { Select } from '@react-three/postprocessing'
 import { useSnapshot } from 'valtio'
-import { state } from './state'
-import { textures } from './textures'
+import { state } from '../stores/state'
+import { textures } from '../data/textures'
 
 export default function Chair() {
     const snap = useSnapshot(state)

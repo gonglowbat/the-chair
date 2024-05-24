@@ -1,7 +1,7 @@
 import { useSnapshot } from 'valtio'
-import { colors } from './colors'
-import { state } from './state'
-import { textures } from './textures'
+import { colors } from '../data/colors'
+import { state } from '../stores/state'
+import { textures } from '../data/textures'
 
 export default function OptionPicker() {
     const snap = useSnapshot(state)
