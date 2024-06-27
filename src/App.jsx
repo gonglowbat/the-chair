@@ -44,7 +44,7 @@ export const App = () => {
             <ChairParts />
 
             <Analytics />
-            <SpeedInsights />
+            {/* <SpeedInsights /> */}
         </>
     )
 }
